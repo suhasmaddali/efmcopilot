@@ -1,0 +1,9 @@
+[server]
+maxUploadSize = 5000
+
+[theme]
+primaryColor = "#76B900"              # NVIDIA Green
+backgroundColor = "#1E1E1E"           # Dark Gray
+secondaryBackgroundColor = "#2A2A2A" # Light Gray
+textColor = "#FFFFFF"                # White
+font = "sans serif"                  # Clean and modern font        
