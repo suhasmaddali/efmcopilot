@@ -30,19 +30,25 @@ if 'session_timestamp' not in st.session_state:
     st.session_state.session_timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 
 # Getting access to credentials for loading data to database
-platform = st.secrets['DATABASE']['PLATFORM']
-aws_access_key_id = st.secrets['DATABASE']['AWS_ACCESS_KEY_ID']
-aws_secret_access_key = st.secrets['DATABASE']['AWS_SECRET_ACCESS_KEY']
-region_name = st.secrets['DATABASE']['REGION_NAME']
-memory_location = st.secrets['DATABASE']['BUCKET']
-number = st.secrets['DATABASE']['NUMBER']
+# platform = st.secrets['DATABASE']['PLATFORM']
+# aws_access_key_id = st.secrets['DATABASE']['AWS_ACCESS_KEY_ID']
+# aws_secret_access_key = st.secrets['DATABASE']['AWS_SECRET_ACCESS_KEY']
+# region_name = st.secrets['DATABASE']['REGION_NAME']
+# memory_location = st.secrets['DATABASE']['BUCKET']
+# number = st.secrets['DATABASE']['NUMBER']
 
 # Getting access to user credentials to validate login
-username_credentials = st.secrets['USER CREDENTIALS']['USERNAME']
-password_credentials = st.secrets['USER CREDENTIALS']['PASSWORD']
+# username_credentials = st.secrets['USER CREDENTIALS']['USERNAME']
+# password_credentials = st.secrets['USER CREDENTIALS']['PASSWORD']
 
-base_url = st.secrets['USER CREDENTIALS']['BASE_URL']
-api_key = st.secrets['USER CREDENTIALS']['API_KEY']
+# base_url = st.secrets['USER CREDENTIALS']['BASE_URL']
+# api_key = st.secrets['USER CREDENTIALS']['API_KEY']
+
+username_credentials = os.getenv("USERNAME")
+password_credentials = os.getenv("PASSWORD")
+
+base_url = os.getenv("BASE URL")
+api_key = os.getenv("API KEY")
 
 # Getting access to NVCF credentials for inference
 # NVCF_CHAT_FUNCTION_ID = st.secrets['NVCF CREDENTIALS']['NVCF_CHAT_FUNCTION_ID']
@@ -51,9 +57,15 @@ api_key = st.secrets['USER CREDENTIALS']['API_KEY']
 # MODEL = "meta/llama-3.1-8b-instruct"
 # os.environ['NVIDIA_API_KEY'] = NVCF_API_KEY
 
-NVCF_CHAT_FUNCTION_ID = st.secrets['NV PRIVATE LARGE MODEL']['NVCF_CHAT_FUNCTION_ID']
+# NVCF_CHAT_FUNCTION_ID = st.secrets['NV PRIVATE LARGE MODEL']['NVCF_CHAT_FUNCTION_ID']
+# NVCF_URL = f"https://api.nvcf.nvidia.com/v2/nvcf/pexec/functions/{NVCF_CHAT_FUNCTION_ID}"
+# NVCF_API_KEY = st.secrets['NV PRIVATE LARGE MODEL']['NVCF_API_KEY']
+# MODEL = "meta/llama-3.1-70b-instruct"
+# os.environ['NVIDIA_API_KEY'] = NVCF_API_KEY
+
+NVCF_CHAT_FUNCTION_ID = os.getenv('NVCF_CHAT_FUNCTION_ID')
 NVCF_URL = f"https://api.nvcf.nvidia.com/v2/nvcf/pexec/functions/{NVCF_CHAT_FUNCTION_ID}"
-NVCF_API_KEY = st.secrets['NV PRIVATE LARGE MODEL']['NVCF_API_KEY']
+NVCF_API_KEY = os.getenv('NVCF_API_KEY')
 MODEL = "meta/llama-3.1-70b-instruct"
 os.environ['NVIDIA_API_KEY'] = NVCF_API_KEY
 
