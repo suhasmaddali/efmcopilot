@@ -1,0 +1,43 @@
+LLM Prompts
+
+1) for the second quarter of 2024, give a plot of the top 20 customers - Not validated
+2) What are the top 20 companies where there is a big miss in the revenue between actuals and booked shipped. Give the companies and the miss as well - Not validated
+3) For the latest quarter, give a plot to show the top 20 customers - Not validated
+4) For the last quarter, give a plot to show the top 20 customers by revenue and actuals - Not validated
+
+Follow up prompts
+1) show me how the forecasts changed for products H100, H200, B100, B200 and GB200 since last month's cycle - Validated but needs improvement
+2) Please exclude GB200 and plot again - Validated but needs improvement
+3) Please also exclude H100 and plot again - Validated but needs improvement
+4) Give only for H100 - Validated but needs improvement
+
+Use case prompts
+
+1) Show me how the forecasts changed for H100. Include all marketing subcodes with H100.
+2) Show me the forecast revenue change for H100. Include all marketing subcodes with H100.
+3) Give a plot to show the forecast quantity change per dell customer
+4) Give me a table to show how the forecasts changed for NALA/E region
+5) Give a plot to show this
+
+6) For H200, show me the forecast change vs actual change
+7) for asustek, give the forecast change vs actual in terms of revenue
+8) for emea region, show how much was the change for forecast revenue vs actual as a table
+
+9) for H100, give the opportunity in forecast vs total buf quantities as plot
+10) for dell customer, give how the opportunity in forecast changed vs the forecast as plot
+
+
+10-16-2024
+1) for CU business unit, show me the current buf vs last month buf - Validated
+2) for ML, show the current buf and the last month buf - Validated
+3) Give me the top 10 accounts based on buf revenue for current quarter for CU business unit - Validated
+4) Give the top 50 accounts based on buf revenue for CU business unit for the current quarter - Validated
+5) Give the top 10 accounts based on net booked shipped revenue - Not Validated
+6) Give only a table to show the top 50 customers for booked shipped quantity for current quarter for CU business unit - Not Validated
+
+10-17-2024
+1) 
+
+
+
+

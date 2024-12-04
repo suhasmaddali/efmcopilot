@@ -1,0 +1,16 @@
+streamlit
+openai==1.35.1
+plotly==5.22.0
+python-dotenv==1.0.0
+openpyxl==3.1.2
+xlsxwriter==3.2.0
+kaleido==0.2.1
+mysql-connector-python
+boto3
+statsmodels
+scikit-learn
+holidays
+xgboost
+streamlit-feedback
+langchain-nvidia-ai-endpoints
+pyarrow
